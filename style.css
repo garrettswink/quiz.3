@@ -1,0 +1,130 @@
+
+.container {
+    border: 1px black solid;
+    height: 700px;
+    width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+}
+
+.banner {
+    height: 100px;
+    width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+}
+
+.bannerThird {
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+#scoreContainer {
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: darkslategray;
+    position: relative;
+    font-size: 40px;
+    top: -1px;
+    color: greenyellow;
+}
+
+#bannerText {
+    position: relative;
+    font-size: 40px;
+    top: -40px;
+    font-family: fantasy;
+    color: darkslategrey;
+}
+
+#timerContainer {
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: darkslategrey;
+}
+
+#timeDisplay {
+    position: relative;
+    top: 1px;
+    font-size: 40px;
+    color: greenyellow;
+}
+
+
+.display {
+    border: 1px black solid;
+    height: 250px;
+    width: 620px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: darkslategray;
+    
+}
+
+#startButton {
+    background-color: red;
+    height: 100px;
+    width: 150px;
+    border-radius: 25px;
+    font-size: 25px;
+    position: relative;
+    top: -60px;
+}
+
+.questionDisplay {
+    /* border: 1px solid black; */
+    height: 50px;
+    width: 500px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    font-size: 40px;
+}
+
+#questionText {
+    color: greenyellow;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: -30px;
+}
+
+.answerDiv {
+    height:270px; 
+    width: 650px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.button {
+    height: 100px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: lightyellow;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+#testButton {
+    width: 100px;
+    height: 100px;
+}
+
+#testOutput {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+}
