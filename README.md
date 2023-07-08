@@ -9,7 +9,7 @@ However, considering the amount of time it took to get the code into its current
 
 Any feedback you might have would be greatly appreciated. Likewise, any thoughts you might have about incorporating the score and name-save functionality as I head into my final draft would be fantastic.  
 
-I'll turn a final version in ASAP upon receiving 2nd round of feedback. 
+I'll turn a final version in ASAP upon receiving the 2nd round of feedback. 
 
 Thanks in advance, 
 
