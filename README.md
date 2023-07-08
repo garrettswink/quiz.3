@@ -35,4 +35,9 @@ WHEN the game is over
 THEN I can save my initials and score
 
 ## Recording & Live Version
+
+### Live Link: https://garrettswink.github.io/quiz.3/
+
+### Demo
+
 ![Quiz](https://github.com/garrettswink/quiz.3/assets/22800055/e573606a-d369-4252-8691-be5a1167b260)
