@@ -6,7 +6,6 @@ const buttonC = document.getElementById('buttonC');
 const buttonD = document.getElementById('buttonD');
 const startButton = document.getElementById('startButton');
 
-
 // Display Output
 const questionText = document.getElementById('questionText');
 const timeDisplay = document.getElementById('timeDisplay');
@@ -23,7 +22,6 @@ scoreDisplay.textContent = score;
 
 // Array Variables
 let currentQuestion = 0;
-
 
 // Quiz Start
 startButton.addEventListener('click', function () {
@@ -49,61 +47,54 @@ function startTimer() {
 function questionCycle() {
     questionText.textContent = quizArray[currentQuestion].question;
 
-    choicesDisplay.innerHTML = ""
+    choicesDisplay.innerHTML = "";
     quizArray[currentQuestion].choices.forEach(function (choice) {
         const btn = document.createElement("button");
         btn.classList.add("button");
         btn.textContent = choice;
-
         btn.onclick = checkChoice;
         choicesDisplay.appendChild(btn)
     })
+};
 
-
-    // if(currentQuestion >= 0 && currentQuestion < quizArray.length) {
-    //     questionText.textContent = quizArray[currentQuestion].question;
-    //     buttonA.textContent = quizArray[currentQuestion].answer[0].text;
-    //     buttonB.textContent = quizArray[currentQuestion].answer[1].text;
-    //     buttonC.textContent = quizArray[currentQuestion].answer[2].text;
-    //     buttonD.textContent = quizArray[currentQuestion].answer[3].text;
-
-
-    // } else {
-    //     // Display a message when the quiz is over
-    //     questionText.textContent = "You have completed the quiz!";
-    //     buttonA.textContent = "🔥🔥🔥🔥";
-    //     buttonB.textContent = "🔥🔥🔥🔥";
-    //     buttonC.textContent = "🔥🔥🔥🔥";
-    //     buttonD.textContent = "🔥🔥🔥🔥";
-    // }
-    // let answerValue = quizArray[currentQuestion].answer[0].correct;
-    // buttonA.addEventListener("click", function() {
-
-    // }); 
-    
-
-}
-
+// Ans Eval
 function checkChoice(event) {
 
     let userChoice = event.target.textContent;
     console.log(userChoice)
     if (userChoice === quizArray[currentQuestion].correctAns ) {
+        // Increase Score
         score++;
         scoreDisplay.textContent = score;
     } else {
         // Deduct time from clock.
         time -= 5;
     }
-    
+
     currentQuestion++;
 
-    // if last Q then rendeer finsih game
+    if (currentQuestion === quizArray.length) {
+        questionText.textContent = 'Gamer Over';
+        choicesDisplay.innerHTML = '';
+        clearInterval(timer);
+
+        const resetButton = document.createElement('button');
+        resetButton.classList.add('button');
+        resetButton.textContent = 'Play Again';
+        resetButton.onclick = reset;
+        choicesDisplay.appendChild(resetButton);
+    } else {
+        questionCycle();
+    }
 }
 
-// Button Event Listener
-buttonA.addEventListener('click', questionCycle);
-buttonB.addEventListener('click', questionCycle);
-buttonC.addEventListener('click', questionCycle);
-buttonD.addEventListener('click', questionCycle);
+function reset () {
+    currentQuestion = 0;
+    score = 0;
+    scoreDisplay.textContent = score;
+    time = 60;
+    timer = undefined;
+    questionCycle();
+    startTimer();
+}
 

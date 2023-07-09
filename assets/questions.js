@@ -7,7 +7,6 @@ const quizArray = [
         "Hard Terminal Management Layer",
         "It doesn't stand for anything...like KFC."],
         correctAns: "Hyper Text Markup Language"
-        
     },
     {
         question: "What does CSS stand for?",
